@@ -1,7 +1,7 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  line-height: 2;
+  font-weight: 300;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -56,4 +56,51 @@ button {
 }
 button:hover {
   border-color: #181b61;
+}
+
+/* // Listado de personajes */
+
+.listado-personajes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.card-personaje {
+  border: 1px solid #d3d3d3;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: left;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+strong {
+  color: #232531;
+  font-weight: bold;
+}
+
+p {
+  line-height: 1.2;
+}
+
+.card-personaje img {
+  width: auto;
+  height: 200px;
+  border-radius: 0.5rem;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+@media (max-width: 1024px) {
+  .listado-personajes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .listado-personajes {
+    grid-template-columns: 1fr;
+  }
 }
